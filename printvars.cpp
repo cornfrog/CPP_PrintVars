@@ -10,14 +10,36 @@ int main(){
     bool myBool = false;
     int* myIntPTR = &myInt;
     int myArr[] = {1,2,3,4,5};
+    
     cout << "myInt = " << myInt << endl;
     cout << "myUInt = " << myUInt << endl;
     cout << "myFloat = " << myFloat << endl;
     cout << "myDouble = " << myDouble << endl;
     cout << "myChar = " << myChar << endl;
     cout << "myBool = " << myBool << endl;
-    cout << "&myIntPTR = " << myIntPTR << endl;
-    cout << "*myIntPTR = " << *myIntPTR << endl;
-    cout << "myArr[0] = " << myArr[0] << endl;
+    cout << "&myIntPTR [reference to myInt] = " << myIntPTR << endl;
+    cout << "*myIntPTR [value of myInt] = " << *myIntPTR << endl;
+    cout << "&myArr = " << myArr << endl;
+
+    /*
+      Printing myArr with myArr[i]  (INDEXING)
+    */
+    cout << "Printing myArr index wise myArr[i]:" << endl;
+    cout << "myArr = {";
+    for(int i = 0; i < 4; i++){
+        cout << " " << myArr[i] << " ";
+    }
+    cout << "}" << endl;
+
+    /*
+        Printing myArr with *myArr+i (POINTERS)
+    */
+    cout << "Printing myArr with pointer arithmetic *myArr+i:" << endl;
+    cout << "myArr = {";
+    for(int i = 0; i < 4; i++){
+        cout << " " << *myArr+i << " ";
+    }
+    cout << "}" << endl;
+
     return 0;
 }
